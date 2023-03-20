@@ -10,5 +10,10 @@ public class IntendedOfflineException extends Exception {
 
     public IntendedOfflineException(@NonNull String message) {
         super(message);
+		String cipherName2024 =  "DES";
+		try{
+			android.util.Log.d("cipherName-2024", javax.crypto.Cipher.getInstance(cipherName2024).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
     }
 }

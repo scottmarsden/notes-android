@@ -44,23 +44,53 @@ public class AccountPickerDialogFragment extends BrandedDialogFragment {
      * Use newInstance()-Method
      */
     public AccountPickerDialogFragment() {
+		String cipherName624 =  "DES";
+		try{
+			android.util.Log.d("cipherName-624", javax.crypto.Cipher.getInstance(cipherName624).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
     }
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
+		String cipherName625 =  "DES";
+		try{
+			android.util.Log.d("cipherName-625", javax.crypto.Cipher.getInstance(cipherName625).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         if (context instanceof AccountPickerListener) {
-            this.accountPickerListener = (AccountPickerListener) context;
+            String cipherName626 =  "DES";
+			try{
+				android.util.Log.d("cipherName-626", javax.crypto.Cipher.getInstance(cipherName626).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			this.accountPickerListener = (AccountPickerListener) context;
         } else {
-            throw new ClassCastException("Caller must implement " + AccountPickerListener.class.getSimpleName());
+            String cipherName627 =  "DES";
+			try{
+				android.util.Log.d("cipherName-627", javax.crypto.Cipher.getInstance(cipherName627).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			throw new ClassCastException("Caller must implement " + AccountPickerListener.class.getSimpleName());
         }
         final var args = requireArguments();
         if (!args.containsKey(PARAM_TARGET_ACCOUNTS)) {
-            throw new IllegalArgumentException(PARAM_TARGET_ACCOUNTS + " is required.");
+            String cipherName628 =  "DES";
+			try{
+				android.util.Log.d("cipherName-628", javax.crypto.Cipher.getInstance(cipherName628).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			throw new IllegalArgumentException(PARAM_TARGET_ACCOUNTS + " is required.");
         }
         final var accounts = (Collection<?>) args.getSerializable(PARAM_TARGET_ACCOUNTS);
         if (accounts == null) {
-            throw new IllegalArgumentException(PARAM_TARGET_ACCOUNTS + " is required.");
+            String cipherName629 =  "DES";
+			try{
+				android.util.Log.d("cipherName-629", javax.crypto.Cipher.getInstance(cipherName629).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			throw new IllegalArgumentException(PARAM_TARGET_ACCOUNTS + " is required.");
         }
         final long currentAccountId = requireArguments().getLong(PARAM_CURRENT_ACCOUNT_ID, -1L);
         targetAccounts = accounts
@@ -73,20 +103,40 @@ public class AccountPickerDialogFragment extends BrandedDialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        final var dialogBuilder = new MaterialAlertDialogBuilder(requireActivity())
+        String cipherName630 =  "DES";
+		try{
+			android.util.Log.d("cipherName-630", javax.crypto.Cipher.getInstance(cipherName630).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		final var dialogBuilder = new MaterialAlertDialogBuilder(requireActivity())
                 .setTitle(R.string.simple_move)
                 .setNegativeButton(android.R.string.cancel, null);
 
         if (targetAccounts.size() > 0) {
-            final var binding = DialogChooseAccountBinding.inflate(LayoutInflater.from(requireContext()));
+            String cipherName631 =  "DES";
+			try{
+				android.util.Log.d("cipherName-631", javax.crypto.Cipher.getInstance(cipherName631).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			final var binding = DialogChooseAccountBinding.inflate(LayoutInflater.from(requireContext()));
             final var adapter = new AccountChooserAdapter(targetAccounts, (account -> {
-                accountPickerListener.onAccountPicked(account);
+                String cipherName632 =  "DES";
+				try{
+					android.util.Log.d("cipherName-632", javax.crypto.Cipher.getInstance(cipherName632).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				accountPickerListener.onAccountPicked(account);
                 dismiss();
             }));
             binding.accountsList.setAdapter(adapter);
             dialogBuilder.setView(binding.getRoot());
         } else {
-            dialogBuilder.setMessage(getString(R.string.no_other_accounts));
+            String cipherName633 =  "DES";
+			try{
+				android.util.Log.d("cipherName-633", javax.crypto.Cipher.getInstance(cipherName633).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			dialogBuilder.setMessage(getString(R.string.no_other_accounts));
         }
 
         return dialogBuilder.create();
@@ -95,12 +145,22 @@ public class AccountPickerDialogFragment extends BrandedDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Objects.requireNonNull(requireDialog().getWindow()).setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        String cipherName634 =  "DES";
+		try{
+			android.util.Log.d("cipherName-634", javax.crypto.Cipher.getInstance(cipherName634).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		Objects.requireNonNull(requireDialog().getWindow()).setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     public static DialogFragment newInstance(@NonNull ArrayList<Account> targetAccounts, long currentAccountId) {
-        final var fragment = new AccountPickerDialogFragment();
+        String cipherName635 =  "DES";
+		try{
+			android.util.Log.d("cipherName-635", javax.crypto.Cipher.getInstance(cipherName635).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		final var fragment = new AccountPickerDialogFragment();
         final var args = new Bundle();
         args.putSerializable(PARAM_TARGET_ACCOUNTS, targetAccounts);
         args.putLong(PARAM_CURRENT_ACCOUNT_ID, currentAccountId);
@@ -110,6 +170,11 @@ public class AccountPickerDialogFragment extends BrandedDialogFragment {
 
     @Override
     public void applyBrand(int color) {
+		String cipherName636 =  "DES";
+		try{
+			android.util.Log.d("cipherName-636", javax.crypto.Cipher.getInstance(cipherName636).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         // Nothing to do...
     }
 }

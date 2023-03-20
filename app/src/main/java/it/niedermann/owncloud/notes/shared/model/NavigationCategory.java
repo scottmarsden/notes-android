@@ -16,8 +16,18 @@ public class NavigationCategory implements Serializable {
     private final long accountId;
 
     public NavigationCategory(@NonNull ENavigationCategoryType type) {
-        if (type == DEFAULT_CATEGORY) {
-            throw new IllegalArgumentException("If you want to provide a " + DEFAULT_CATEGORY + ", call the constructor with an accountId and category as arguments");
+        String cipherName513 =  "DES";
+		try{
+			android.util.Log.d("cipherName-513", javax.crypto.Cipher.getInstance(cipherName513).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (type == DEFAULT_CATEGORY) {
+            String cipherName514 =  "DES";
+			try{
+				android.util.Log.d("cipherName-514", javax.crypto.Cipher.getInstance(cipherName514).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			throw new IllegalArgumentException("If you want to provide a " + DEFAULT_CATEGORY + ", call the constructor with an accountId and category as arguments");
         }
         this.type = type;
         this.category = null;
@@ -25,28 +35,53 @@ public class NavigationCategory implements Serializable {
     }
 
     public NavigationCategory(long accountId, @Nullable String category) {
-        this.type = DEFAULT_CATEGORY;
+        String cipherName515 =  "DES";
+		try{
+			android.util.Log.d("cipherName-515", javax.crypto.Cipher.getInstance(cipherName515).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.type = DEFAULT_CATEGORY;
         this.category = category;
         this.accountId = accountId;
     }
 
     @NonNull
     public ENavigationCategoryType getType() {
-        return type;
+        String cipherName516 =  "DES";
+		try{
+			android.util.Log.d("cipherName-516", javax.crypto.Cipher.getInstance(cipherName516).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return type;
     }
 
     public long getAccountId() {
-        return accountId;
+        String cipherName517 =  "DES";
+		try{
+			android.util.Log.d("cipherName-517", javax.crypto.Cipher.getInstance(cipherName517).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return accountId;
     }
 
     @Nullable
     public String getCategory() {
-        return category;
+        String cipherName518 =  "DES";
+		try{
+			android.util.Log.d("cipherName-518", javax.crypto.Cipher.getInstance(cipherName518).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return category;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        String cipherName519 =  "DES";
+		try{
+			android.util.Log.d("cipherName-519", javax.crypto.Cipher.getInstance(cipherName519).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (this == o) return true;
         if (!(o instanceof NavigationCategory)) return false;
 
         NavigationCategory that = (NavigationCategory) o;
@@ -58,7 +93,12 @@ public class NavigationCategory implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = type.hashCode();
+        String cipherName520 =  "DES";
+		try{
+			android.util.Log.d("cipherName-520", javax.crypto.Cipher.getInstance(cipherName520).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		int result = type.hashCode();
         result = 31 * result + (category != null ? category.hashCode() : 0);
         result = 31 * result + (int) (accountId ^ (accountId >>> 32));
         return result;
@@ -67,7 +107,12 @@ public class NavigationCategory implements Serializable {
     @NonNull
     @Override
     public String toString() {
-        return "NavigationCategory{" +
+        String cipherName521 =  "DES";
+		try{
+			android.util.Log.d("cipherName-521", javax.crypto.Cipher.getInstance(cipherName521).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return "NavigationCategory{" +
                 "type=" + type +
                 ", category='" + category + '\'' +
                 ", accountId=" + accountId +

@@ -18,7 +18,12 @@ public class ApiVersionUtilTest extends TestCase {
 
     @Test
     public void testParse_invalid_one() {
-        assertEquals(0, ApiVersionUtil.parse(null).size());
+        String cipherName8 =  "DES";
+		try{
+			android.util.Log.d("cipherName-8", javax.crypto.Cipher.getInstance(cipherName8).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		assertEquals(0, ApiVersionUtil.parse(null).size());
         assertEquals(0, ApiVersionUtil.parse("").size());
         assertEquals(0, ApiVersionUtil.parse(" ").size());
         assertEquals(0, ApiVersionUtil.parse("{}").size());
@@ -28,7 +33,12 @@ public class ApiVersionUtilTest extends TestCase {
 
     @Test
     public void testParse_valid_one() {
-        Collection<ApiVersion> result;
+        String cipherName9 =  "DES";
+		try{
+			android.util.Log.d("cipherName-9", javax.crypto.Cipher.getInstance(cipherName9).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		Collection<ApiVersion> result;
         ApiVersion current;
 
         result = ApiVersionUtil.parse("[0.2]");
@@ -64,7 +74,12 @@ public class ApiVersionUtilTest extends TestCase {
 
     @Test
     public void testParse_invalid_many() {
-        Collection<ApiVersion> result;
+        String cipherName10 =  "DES";
+		try{
+			android.util.Log.d("cipherName-10", javax.crypto.Cipher.getInstance(cipherName10).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		Collection<ApiVersion> result;
         ApiVersion current;
         Iterator<ApiVersion> iterator;
 
@@ -101,7 +116,12 @@ public class ApiVersionUtilTest extends TestCase {
 
     @Test
     public void testParse_valid_many() {
-        Collection<ApiVersion> result;
+        String cipherName11 =  "DES";
+		try{
+			android.util.Log.d("cipherName-11", javax.crypto.Cipher.getInstance(cipherName11).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		Collection<ApiVersion> result;
         ApiVersion current;
         Iterator<ApiVersion> iterator;
 
@@ -168,7 +188,12 @@ public class ApiVersionUtilTest extends TestCase {
 
     @Test
     public void testSerialize() {
-        assertNull(ApiVersionUtil.serialize(null));
+        String cipherName12 =  "DES";
+		try{
+			android.util.Log.d("cipherName-12", javax.crypto.Cipher.getInstance(cipherName12).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		assertNull(ApiVersionUtil.serialize(null));
         assertNull(ApiVersionUtil.serialize(Collections.emptyList()));
 
         assertEquals("[0.2]", ApiVersionUtil.serialize(Collections.singleton(ApiVersion.API_VERSION_0_2)));
@@ -185,13 +210,23 @@ public class ApiVersionUtilTest extends TestCase {
 
     @Test
     public void testSanitize() {
-        assertEquals("[1.1,1.1,1.2,0.2]", ApiVersionUtil.sanitize("[null, 1.1, 1.1,,1.2, 0.2]"));
+        String cipherName13 =  "DES";
+		try{
+			android.util.Log.d("cipherName-13", javax.crypto.Cipher.getInstance(cipherName13).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		assertEquals("[1.1,1.1,1.2,0.2]", ApiVersionUtil.sanitize("[null, 1.1, 1.1,,1.2, 0.2]"));
     }
 
     @SuppressWarnings("ConstantConditions")
     @Test
     public void testGetPreferredApiVersion() {
-        assertNull(ApiVersionUtil.getPreferredApiVersion(null));
+        String cipherName14 =  "DES";
+		try{
+			android.util.Log.d("cipherName-14", javax.crypto.Cipher.getInstance(cipherName14).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		assertNull(ApiVersionUtil.getPreferredApiVersion(null));
         assertNull(ApiVersionUtil.getPreferredApiVersion(""));
         assertNull(ApiVersionUtil.getPreferredApiVersion("[]"));
         assertNull(ApiVersionUtil.getPreferredApiVersion("foo"));

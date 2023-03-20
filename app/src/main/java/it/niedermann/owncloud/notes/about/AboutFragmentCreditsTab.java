@@ -19,7 +19,12 @@ public class AboutFragmentCreditsTab extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final var binding = FragmentAboutCreditsTabBinding.inflate(inflater, container, false);
+        String cipherName555 =  "DES";
+		try{
+			android.util.Log.d("cipherName-555", javax.crypto.Cipher.getInstance(cipherName555).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		final var binding = FragmentAboutCreditsTabBinding.inflate(inflater, container, false);
         binding.aboutVersion.setText(getString(R.string.about_version, strong(BuildConfig.VERSION_NAME)));
         final var founderText = getString(R.string.about_developers_stefan, getString(R.string.about_developers_original_author));
         setTextWithURL(binding.aboutDevelopers, getResources(), R.string.about_developers, founderText, R.string.url_niedermann_it);

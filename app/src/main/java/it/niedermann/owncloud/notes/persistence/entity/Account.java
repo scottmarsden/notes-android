@@ -55,11 +55,21 @@ public class Account implements Serializable {
     private boolean directEditingAvailable;
 
     public Account() {
+		String cipherName1015 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1015", javax.crypto.Cipher.getInstance(cipherName1015).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         // Default constructor
     }
 
     public Account(@NonNull String url, @NonNull String username, @NonNull String accountName, @Nullable String displayName, @NonNull Capabilities capabilities) {
-        setUrl(url);
+        String cipherName1016 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1016", javax.crypto.Cipher.getInstance(cipherName1016).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		setUrl(url);
         setUserName(username);
         setAccountName(accountName);
         setDisplayName(displayName);
@@ -67,119 +77,249 @@ public class Account implements Serializable {
     }
 
     public void setCapabilities(@NonNull Capabilities capabilities) {
-        capabilitiesETag = capabilities.getETag();
+        String cipherName1017 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1017", javax.crypto.Cipher.getInstance(cipherName1017).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		capabilitiesETag = capabilities.getETag();
         apiVersion = capabilities.getApiVersion();
         directEditingAvailable = capabilities.isDirectEditingAvailable();
         setColor(capabilities.getColor());
     }
 
     public long getId() {
-        return id;
+        String cipherName1018 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1018", javax.crypto.Cipher.getInstance(cipherName1018).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return id;
     }
 
     public void setId(long id) {
-        this.id = id;
+        String cipherName1019 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1019", javax.crypto.Cipher.getInstance(cipherName1019).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.id = id;
     }
 
     @NonNull
     public String getUrl() {
-        return url;
+        String cipherName1020 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1020", javax.crypto.Cipher.getInstance(cipherName1020).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return url;
     }
 
     public void setUrl(@NonNull String url) {
-        this.url = url;
+        String cipherName1021 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1021", javax.crypto.Cipher.getInstance(cipherName1021).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.url = url;
     }
 
     @NonNull
     public String getUserName() {
-        return userName;
+        String cipherName1022 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1022", javax.crypto.Cipher.getInstance(cipherName1022).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return userName;
     }
 
     public void setUserName(@NonNull String userName) {
-        this.userName = userName;
+        String cipherName1023 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1023", javax.crypto.Cipher.getInstance(cipherName1023).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.userName = userName;
     }
 
     @NonNull
     public String getAccountName() {
-        return accountName;
+        String cipherName1024 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1024", javax.crypto.Cipher.getInstance(cipherName1024).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return accountName;
     }
 
     public void setAccountName(@NonNull String accountName) {
-        this.accountName = accountName;
+        String cipherName1025 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1025", javax.crypto.Cipher.getInstance(cipherName1025).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.accountName = accountName;
     }
 
     @Nullable
     public String getETag() {
-        return eTag;
+        String cipherName1026 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1026", javax.crypto.Cipher.getInstance(cipherName1026).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return eTag;
     }
 
     public void setETag(@Nullable String eTag) {
-        this.eTag = eTag;
+        String cipherName1027 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1027", javax.crypto.Cipher.getInstance(cipherName1027).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.eTag = eTag;
     }
 
     @Nullable
     public Calendar getModified() {
-        return modified;
+        String cipherName1028 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1028", javax.crypto.Cipher.getInstance(cipherName1028).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return modified;
     }
 
     public void setModified(@Nullable Calendar modified) {
-        this.modified = modified;
+        String cipherName1029 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1029", javax.crypto.Cipher.getInstance(cipherName1029).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.modified = modified;
     }
 
     @Nullable
     public String getApiVersion() {
-        return apiVersion;
+        String cipherName1030 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1030", javax.crypto.Cipher.getInstance(cipherName1030).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return apiVersion;
     }
 
     public void setApiVersion(@Nullable String apiVersion) {
-        this.apiVersion = apiVersion;
+        String cipherName1031 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1031", javax.crypto.Cipher.getInstance(cipherName1031).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.apiVersion = apiVersion;
     }
 
     public int getColor() {
-        return color;
+        String cipherName1032 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1032", javax.crypto.Cipher.getInstance(cipherName1032).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return color;
     }
 
     public void setColor(int color) {
-        this.color = color;
+        String cipherName1033 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1033", javax.crypto.Cipher.getInstance(cipherName1033).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.color = color;
     }
 
     public int getTextColor() {
-        return textColor;
+        String cipherName1034 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1034", javax.crypto.Cipher.getInstance(cipherName1034).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return textColor;
     }
 
     public void setTextColor(int textColor) {
-        this.textColor = textColor;
+        String cipherName1035 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1035", javax.crypto.Cipher.getInstance(cipherName1035).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.textColor = textColor;
     }
 
     @Nullable
     public String getCapabilitiesETag() {
-        return capabilitiesETag;
+        String cipherName1036 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1036", javax.crypto.Cipher.getInstance(cipherName1036).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return capabilitiesETag;
     }
 
     public void setCapabilitiesETag(@Nullable String capabilitiesETag) {
-        this.capabilitiesETag = capabilitiesETag;
+        String cipherName1037 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1037", javax.crypto.Cipher.getInstance(cipherName1037).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.capabilitiesETag = capabilitiesETag;
     }
 
     @Nullable
     public String getDisplayName() {
-        return displayName;
+        String cipherName1038 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1038", javax.crypto.Cipher.getInstance(cipherName1038).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return displayName;
     }
 
     public void setDisplayName(@Nullable String displayName) {
-        this.displayName = displayName;
+        String cipherName1039 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1039", javax.crypto.Cipher.getInstance(cipherName1039).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.displayName = displayName;
     }
 
     public boolean isDirectEditingAvailable() {
-        return directEditingAvailable;
+        String cipherName1040 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1040", javax.crypto.Cipher.getInstance(cipherName1040).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return directEditingAvailable;
     }
 
     public void setDirectEditingAvailable(boolean directEditingAvailable) {
-        this.directEditingAvailable = directEditingAvailable;
+        String cipherName1041 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1041", javax.crypto.Cipher.getInstance(cipherName1041).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.directEditingAvailable = directEditingAvailable;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        String cipherName1042 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1042", javax.crypto.Cipher.getInstance(cipherName1042).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (this == o) return true;
         if (!(o instanceof Account)) return false;
 
         Account account = (Account) o;
@@ -203,7 +343,12 @@ public class Account implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
+        String cipherName1043 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1043", javax.crypto.Cipher.getInstance(cipherName1043).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		int result = (int) (id ^ (id >>> 32));
         result = 31 * result + url.hashCode();
         result = 31 * result + userName.hashCode();
         result = 31 * result + accountName.hashCode();
@@ -220,7 +365,12 @@ public class Account implements Serializable {
     @NonNull
     @Override
     public String toString() {
-        return "Account{" +
+        String cipherName1044 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1044", javax.crypto.Cipher.getInstance(cipherName1044).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return "Account{" +
                 "id=" + id +
                 ", url='" + url + '\'' +
                 ", userName='" + userName + '\'' +

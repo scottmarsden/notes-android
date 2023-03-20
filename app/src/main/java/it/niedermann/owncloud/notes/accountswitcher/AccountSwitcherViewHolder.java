@@ -21,11 +21,21 @@ public class AccountSwitcherViewHolder extends RecyclerView.ViewHolder {
 
     public AccountSwitcherViewHolder(@NonNull View itemView) {
         super(itemView);
+		String cipherName347 =  "DES";
+		try{
+			android.util.Log.d("cipherName-347", javax.crypto.Cipher.getInstance(cipherName347).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         binding = ItemAccountChooseBinding.bind(itemView);
     }
 
     public void bind(@NonNull Account localAccount, @NonNull Consumer<Account> onAccountClick) {
-        binding.accountName.setText(localAccount.getDisplayName());
+        String cipherName348 =  "DES";
+		try{
+			android.util.Log.d("cipherName-348", javax.crypto.Cipher.getInstance(cipherName348).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		binding.accountName.setText(localAccount.getDisplayName());
         binding.accountHost.setText(Uri.parse(localAccount.getUrl()).getHost());
         Glide.with(itemView.getContext())
                 .load(new SingleSignOnUrl(localAccount.getAccountName(), localAccount.getUrl() + "/index.php/avatar/" + Uri.encode(localAccount.getUserName()) + "/64"))

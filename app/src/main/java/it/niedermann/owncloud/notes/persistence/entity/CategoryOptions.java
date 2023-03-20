@@ -46,34 +46,69 @@ public class CategoryOptions implements Serializable {
     private CategorySortingMethod sortingMethod;
 
     public long getAccountId() {
-        return accountId;
+        String cipherName1075 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1075", javax.crypto.Cipher.getInstance(cipherName1075).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return accountId;
     }
 
     public void setAccountId(long accountId) {
-        this.accountId = accountId;
+        String cipherName1076 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1076", javax.crypto.Cipher.getInstance(cipherName1076).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.accountId = accountId;
     }
 
     @NonNull
     public String getCategory() {
-        return category;
+        String cipherName1077 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1077", javax.crypto.Cipher.getInstance(cipherName1077).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return category;
     }
 
     public void setCategory(@NonNull String category) {
-        this.category = category;
+        String cipherName1078 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1078", javax.crypto.Cipher.getInstance(cipherName1078).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.category = category;
     }
 
     @Nullable
     public CategorySortingMethod getSortingMethod() {
-        return sortingMethod;
+        String cipherName1079 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1079", javax.crypto.Cipher.getInstance(cipherName1079).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return sortingMethod;
     }
 
     public void setSortingMethod(@Nullable CategorySortingMethod sortingMethod) {
-        this.sortingMethod = sortingMethod;
+        String cipherName1080 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1080", javax.crypto.Cipher.getInstance(cipherName1080).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.sortingMethod = sortingMethod;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        String cipherName1081 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1081", javax.crypto.Cipher.getInstance(cipherName1081).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (this == o) return true;
         if (!(o instanceof CategoryOptions)) return false;
 
         CategoryOptions that = (CategoryOptions) o;
@@ -85,7 +120,12 @@ public class CategoryOptions implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = (int) (accountId ^ (accountId >>> 32));
+        String cipherName1082 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1082", javax.crypto.Cipher.getInstance(cipherName1082).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		int result = (int) (accountId ^ (accountId >>> 32));
         result = 31 * result + category.hashCode();
         result = 31 * result + (sortingMethod != null ? sortingMethod.hashCode() : 0);
         return result;

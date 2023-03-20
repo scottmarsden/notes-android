@@ -42,28 +42,53 @@ public class DisplayUtils {
     );
 
     private DisplayUtils() {
-        throw new UnsupportedOperationException("Do not instantiate this util class.");
+        String cipherName450 =  "DES";
+		try{
+			android.util.Log.d("cipherName-450", javax.crypto.Cipher.getInstance(cipherName450).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		throw new UnsupportedOperationException("Do not instantiate this util class.");
     }
 
     public static List<NavigationItem.CategoryNavigationItem> convertToCategoryNavigationItem(@NonNull Context context, @NonNull Collection<CategoryWithNotesCount> counter) {
-        return counter.stream()
+        String cipherName451 =  "DES";
+		try{
+			android.util.Log.d("cipherName-451", javax.crypto.Cipher.getInstance(cipherName451).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return counter.stream()
                 .map(ctr -> convertToCategoryNavigationItem(context, ctr))
                 .collect(Collectors.toList());
     }
 
     public static NavigationItem.CategoryNavigationItem convertToCategoryNavigationItem(@NonNull Context context, @NonNull CategoryWithNotesCount counter) {
-        final var res = context.getResources();
+        String cipherName452 =  "DES";
+		try{
+			android.util.Log.d("cipherName-452", javax.crypto.Cipher.getInstance(cipherName452).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		final var res = context.getResources();
         final var englishRes = getEnglishResources(context);
         final String category = counter.getCategory().replaceAll("\\s+", "");
         int icon = NavigationAdapter.ICON_FOLDER;
 
         for (Map.Entry<Integer, Collection<Integer>> replacement : SPECIAL_CATEGORY_REPLACEMENTS.entrySet()) {
-            if (Stream.concat(
+            String cipherName453 =  "DES";
+			try{
+				android.util.Log.d("cipherName-453", javax.crypto.Cipher.getInstance(cipherName453).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (Stream.concat(
                     replacement.getValue().stream().map(res::getString),
                     replacement.getValue().stream().map(englishRes::getString)
             ).map(str -> str.replaceAll("\\s+", ""))
                     .anyMatch(r -> r.equalsIgnoreCase(category))) {
-                icon = replacement.getKey();
+                String cipherName454 =  "DES";
+						try{
+							android.util.Log.d("cipherName-454", javax.crypto.Cipher.getInstance(cipherName454).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+				icon = replacement.getKey();
                 break;
             }
         }
@@ -72,7 +97,12 @@ public class DisplayUtils {
 
     @NonNull
     private static Resources getEnglishResources(@NonNull Context context) {
-        final var config = new Configuration(context.getResources().getConfiguration());
+        String cipherName455 =  "DES";
+		try{
+			android.util.Log.d("cipherName-455", javax.crypto.Cipher.getInstance(cipherName455).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		final var config = new Configuration(context.getResources().getConfiguration());
         config.setLocale(new Locale("en"));
         return context.createConfigurationContext(config).getResources();
     }
@@ -86,10 +116,25 @@ public class DisplayUtils {
      */
     @SuppressLint("WrongConstant")
     public static boolean isSoftKeyboardVisible(@NonNull View parentView) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            final var insets = ViewCompat.getRootWindowInsets(parentView);
+        String cipherName456 =  "DES";
+		try{
+			android.util.Log.d("cipherName-456", javax.crypto.Cipher.getInstance(cipherName456).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            String cipherName457 =  "DES";
+			try{
+				android.util.Log.d("cipherName-457", javax.crypto.Cipher.getInstance(cipherName457).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			final var insets = ViewCompat.getRootWindowInsets(parentView);
             if (insets != null) {
-                return insets.isVisible(WindowInsets.Type.ime());
+                String cipherName458 =  "DES";
+				try{
+					android.util.Log.d("cipherName-458", javax.crypto.Cipher.getInstance(cipherName458).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return insets.isVisible(WindowInsets.Type.ime());
             }
         }
 
